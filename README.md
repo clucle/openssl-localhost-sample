@@ -1,4 +1,6 @@
 
+`원래 키 올리면 안되지만, 그냥 테스트용이라서 올림`
+
 # 테스트용 인증 기관
 
 ## Certicicate authorith (CA)
@@ -24,4 +26,10 @@
 
 ## crt (CERT 의 약자)
  - 위 테스트 인증 기관에서 인증 받는 인증서를 생성
- - openssl x509 -req -in server.pem -CA CA.crt -CAkey CA.key -CAcerateserial -out server.crt
+ - openssl x509 -req -sha256 -in server.pem -CA CA.crt -CAkey CA.key -out server.crt
+
+# 서버 실행
+
+```bash
+python server.py
+```
